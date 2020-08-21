@@ -1,0 +1,20 @@
+server:
+  port: 8181
+  servlet:
+    context-path: /rocket-api
+
+spring:
+  application:
+    name: rocket-platform
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/rocket_platform?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: im.qingtui.rocketmq.consumer.dynamic.consumer.rocket.model.entity
+
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
